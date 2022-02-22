@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico"> 
+    <title>stereo-mono</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,300;0,500;0,600;0,800;1,600&family=Montserrat:ital,wght@0,900;1,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,300;0,500;0,600;0,800;1,600&family=Montserrat:ital,wght@0,100;0,200;0,500;0,600;0,700;1,200;1,300;1,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,300;0,500;0,600;0,800;1,600&family=Montserrat:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;1,200;1,300;1,800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+
+   <script>
+
+
+  // 메인슬라이드
+  function prev(){
+  $('.slide li:last').prependTo('.slide');
+    $('.slide').css('margin-left',-990); // $('.slide').css({marginLeft:-990});
+    $('.slide').stop().animate({marginLeft:0},800);  
+  }
+  
+  function next(){
+    $('.slide').stop().animate({marginLeft:-990}, function(){
+    $('.slide li:first').appendTo('.slide');
+    $('.slide').css({marginLeft:0});
+  });
+  }
+  
+  function slide(){
+   $('.slide').stop().animate({marginLeft:-990}, function(){
+    $('.slide li:first').appendTo('.slide');
+    $('.slide').css({marginLeft:0});
+  });
+  }
+  setInterval(slide, 3000);
+  
+  // $('.prev').click(function(){
+  // prev();
+  // });
+  
+  // $('.next').click(function(){
+  // next();
+  // });
+// 메인슬라이드
+  
+
+
+  // new뮤직
+  // $(function() { 
+  //  $.ajax({
+  //     method: "GET",
+  //     url: "https://dapi.kakao.com/v2/search/image",
+  //     headers: { Authorization: "KakaoAK 13c084710f2e70cf59b3d629ff40705c"},
+  //     data: { query: "shawn mendes 305" }
+  // })
+
+  // .done(function(msg) {          
+  //     console.log(msg);
+  //     $(msg.documents).each(function(index){                        
+  //         $("#content").append('<img src="'+this.image_url+'"/>'+"<p>");
+  //     });
+  //     $(".new_m").append('<img src="'+msg.documents[16].image_url+'"/>');
+  //  });       
+  // });
+
+
+  // $(function() { 
+  //  $.ajax({
+  //     method: "GET",
+  //     url: "https://dapi.kakao.com/v2/search/image",
+  //     headers: { Authorization: "KakaoAK 13c084710f2e70cf59b3d629ff40705c"},
+  //     data: { query: "sia together" }
+  // })
+
+  // .done(function(msg) {          
+  //     console.log(msg);
+  //     $(msg.documents).each(function(index){                        
+  //         $("#content").append('<img src="'+this.image_url+'"/>'+"<p>");
+  //     });
+  //     $(".new_m").append('<img src="'+msg.documents[6].image_url+'"/>');
+  //  });       
+  // });
+
+
+  // $(function() { 
+  //  $.ajax({
+  //     method: "GET",
+  //     url: "https://dapi.kakao.com/v2/search/image",
+  //     headers: { Authorization: "KakaoAK 13c084710f2e70cf59b3d629ff40705c"},
+  //     data: { query: "Conan Gray Sunset Season" }
+  // })
+
+  // .done(function(msg) {          
+  //     console.log(msg);
+  //     $(msg.documents).each(function(index){                        
+  //         $("#content").append('<img src="'+this.image_url+'"/>'+"<p>");
+  //     });
+  //     $(".new_m").append('<img src="'+msg.documents[18].image_url+'"/>');
+  //  });       
+  // });
+  // new뮤직
+
+
+
+
+  // best뮤직
+  // $(function() { 
+  //  $.ajax({
+  //     method: "GET",
+  //     url: "https://dapi.kakao.com/v2/search/image",
+  //     headers: { Authorization: "KakaoAK 13c084710f2e70cf59b3d629ff40705c"},
+  //     data: { query: "death bed  powfu" }
+  // })
+
+  // .done(function(msg) {          
+  //     console.log(msg);
+  //     $(msg.documents).each(function(index){                        
+  //         $("#content2").append('<img src="'+this.image_url+'"/>'+"<p>");
+  //     });
+  //     $(".best_m").append('<img src="'+msg.documents[0].image_url+'"/>');
+  //  });       
+  // });
+
+
+  // $(function() { 
+  //  $.ajax({
+  //     method: "GET",
+  //     url: "https://dapi.kakao.com/v2/search/image",
+  //     headers: { Authorization: "KakaoAK 13c084710f2e70cf59b3d629ff40705c"},
+  //     data: { query: "keshi" }
+  // })
+
+  // .done(function(msg) {          
+  //     console.log(msg);
+  //     $(msg.documents).each(function(index){                        
+  //         $("#content2").append('<img src="'+this.image_url+'"/>'+"<p>");
+  //     });
+  //     $(".best_m").append('<img src="'+msg.documents[6].image_url+'"/>');
+  //  });       
+  // });
+
+
+  // $(function() { 
+  //  $.ajax({
+  //     method: "GET",
+  //     url: "https://dapi.kakao.com/v2/search/image",
+  //     headers: { Authorization: "KakaoAK 13c084710f2e70cf59b3d629ff40705c"},
+  //     data: { query: "jeff bernet call you mine" }
+  // })
+
+  // .done(function(msg) {          
+  //     console.log(msg);
+  //     $(msg.documents).each(function(index){                        
+  //         $("#content2").append('<img src="'+this.image_url+'"/>'+"<p>");
+  //     });
+  //     $(".best_m").append('<img src="'+msg.documents[16].image_url+'"/>');
+  //  });       
+  // });
+
+
+  // $(function() { 
+  //  $.ajax({
+  //     method: "GET",
+  //     url: "https://dapi.kakao.com/v2/search/image",
+  //     headers: { Authorization: "KakaoAK 13c084710f2e70cf59b3d629ff40705c"},
+  //     data: { query: "swimming pool 88rising" }
+  // })
+
+  // .done(function(msg) {          
+  //     console.log(msg);
+  //     $(msg.documents).each(function(index){                        
+  //         $("#content2").append('<img src="'+this.image_url+'"/>'+"<p>");
+  //     });
+  //     $(".best_m").append('<img src="'+msg.documents[0].image_url+'"/>');
+  //  });       
+  // });
+  // best뮤직
+
+
+  // 비틀즈 50주년
+  // $(function() { 
+  //   $.ajax({
+  //     method: "GET",
+  //     url: "https://dapi.kakao.com/v2/search/image",
+  //     headers: { Authorization: "KakaoAK 13c084710f2e70cf59b3d629ff40705c"},
+  //     data: { query: "The Beatles Abbey Road Anniversary" }
+  // })
+
+  // .done(function(msg) {          
+  //     console.log(msg);
+  //     $(msg.documents).each(function(index){                        
+  //         $("#content3").append('<img src="'+this.image_url+'"/>'+"<p>");
+  //     });
+  //     $(".c3_l_t").append('<img src="'+msg.documents[33].image_url+'"/>');
+  //   });       
+  // });
+// 비틀즈 50주년
+
+
+// 메뉴바
+   $(function(){
+       $('.menu>li').mouseover(function(){
+          $(this).children('.sub').stop().slideDown();
+        
+       }).mouseout(function(){
+         $('.sub').stop().slideUp();
+       });
+
+      });
+// 메뉴바
+
+
+// 하단 슬라이드 이미지
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+// 하단 슬라이드 이미지
+
+  </script>
+      
+
+</head>
+
+<body>
+
+  <div id="wrap">
+    <div class="l_box">
+      <div class="l_box_s">
+       <div class="search">
+     <!-- 좌측 상단 아이콘 -->
+      <div class='toggle'>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <script  src="js/index.js"></script>
+     <!-- 좌측 상단 아이콘 -->
+        <div class="search_box">
+           <form class="m_search_box" action="/action_page.php" style="margin:auto;">
+              <input type="text" placeholder="search artists, albums and more" name="search2">
+              <i class="fas fa-search"></i>
+           </form>
+           <i class="fas fa-shopping-bag"></i>
+           <i class="fas fa-user"></i>
+        </div>
+      </div>
+
+      <div class="navi">
+         <ul class="menu">
+           <li><a href="sub.html">VINYL</a>
+             <ul class="sub">
+               <li><a href="#">Classic</a></li>
+               <li><a href="#">Electronic</a></li>
+               <li><a href="#">Hiphop</a></li>
+               <li><a href="#">Jazz</a></li>
+               <li><a href="sub.html">Pop</a></li>
+               <li><a href="#">Rock</a></li>
+             </ul>
+           </li>
+
+           <li><a href="#">STORE</a>
+              <ul class="sub">
+               <li><a href="#">Interior</a></li>
+               <li><a href="#">ACC</a></li>
+               <li><a href="#">Clothes</a></li>
+              </ul>
+           </li>
+
+           <li><a href="#">POST</a>
+            <ul class="sub">
+             <li><a href="#">Artist</a></li>
+             <li><a href="#">Special Post</a></li>
+             <li><a href="#">Mono Post</a></li>
+            </ul>
+         </li>
+
+         
+         <li><a href="#">Q&A</a>
+          <ul class="sub">
+           <li><a href="#">FAQ</a></li>
+           <li><a href="#">Q&A</a></li>
+          </ul>
+         </li>
+
+          <li><a href="#">CONTACT</a>
+            <ul class="sub">
+             <li><a href="#">Notice</a></li>
+             <li><a href="#">Directions</a></li>
+             <li><a href="#">Event</a></li>
+            </ul>
+         </li>
+        </ul>
+      </div>
+      
+    <div class="main">
+        <div id="slidewrap">
+        <ul class="slide">
+          <li><img src="img/main1.jpg" alt=""></li>
+          <li><img src="img/main2.jpg" alt=""></li>
+          <li><img src="img/main3.jpg" alt=""></li>
+          <li><img src="img/main4.jpg" alt=""></li>
+        </ul>
+       </div>
+
+       <div class="content">
+            <div class="new_box1">
+              <h1>NEWEST</h1>
+            </div>
+            <article class="new_m">
+            <div class="new_info_box">
+              <div class="new_info">
+                <img src="img/music/new_1.jpg" alt="">
+                <h1>Shawn Mendes</h1>
+                <h2>Wonder</h2>
+                <p>33,000KRW</p>
+                <h3>[Universal Music]</h3>
+              </div>
+
+             <div class="new_info">
+              <img src="img/music/new_2.jpg" alt="">
+              <h1>Sia</h1>
+              <h2>Music (Songs From And Inspired<br>By The Motion Picture)</h2>
+              <p>42,500KRW</p>
+              <h3>[Wanna Music Korea]</h3>
+             </div>
+
+             <div class="new_info">
+              <img src="img/music/new_3.jpg" alt="">
+              <h1>Conan Gray</h1>
+              <h2>Sunset Season</h2>
+              <p>27,900KRW</p>
+              <h3>[Universal Music]</h3>
+            </div>
+          </div>
+           </article>
+       </div>
+    
+
+       <div class="content2">
+        <div class="best_box1">
+          <h1>WEEKLY BEST</h1>
+        </div>
+        <article class="best_m">
+            <div class="best_info_box">
+              <div class="best_info">
+                <img src="img/music/best_1.jpg" alt="">
+                <h1>Powfu</h1>
+                <h2>Death Bed<br>(Coffee For Your Head)</h2>
+                <p>31,000KRW</p>
+                <h3>[Sony Music]</h3>
+              </div>
+
+             <div class="best_info">
+              <img src="img/music/best_2.jpg" alt="">
+              <h1>Maroon 5</h1>
+              <h2>JORDI (Deluxe)</h2>
+              <p>35,900KRW</p>
+              <h3>[Universal Music]</h3>
+             </div>
+
+             <div class="best_info">
+              <img src="img/music/best_3.jpg" alt="">
+              <h1>Lady Gaga</h1>
+              <h2>Joanne (Where Do You<br>Think You're Goin'?)</h2>
+              <p>32,000KRW</p>
+              <h3>[Universal Music]</h3>
+            </div>
+
+            <div class="best_info">
+              <img src="img/music/best_4.jpg" alt="">
+              <h1>88rising·Higher<br>Brothers·03 Greedo</h1>
+              <h2>Swimming Pool</h2>
+              <p>38,000KRW</p>
+              <h3>[Wanna Music Korea]</h3>
+            </div>
+          </div>
+        </article>
+
+
+       <article class="best_m">
+        <div class="best_info_box">
+          <div class="best_info">
+            <img src="img/music/best_6.jpg" alt="">
+            <h1>Travis Scott</h1>
+            <h2>Astroworld</h2>
+            <p>37,000KRW</p>
+            <h3>[Sony Music]</h3>
+          </div>
+
+         <div class="best_info">
+          <img src="img/music/best_5.jpg" alt="">
+          <h1>HONNE</h1>
+           <h2>Lets Just Say The World<br>Ended A Week</h2>
+           <p>35,000KRW</p>
+           <h3>[Universal Music]</h3>
+         </div>
+
+         <div class="best_info">
+          <img src="img/music/best_7.jpg" alt="">
+          <h1>Anne-Marie</h1>
+          <h2>Therapy</h2>
+          <p>38,000KRW</p>
+          <h3>[Kakao Entertainment]</h3>
+        </div>
+
+        <div class="best_info">
+          <img src="img/music/best_8.jpg" alt="">
+          <h1>Ariana Grande</h1>
+          <h2>Dangerous Woman</h2>
+          <p>33,000KRW</p>
+          <h3>[Universal Music]</h3>
+        </div>
+      </div>
+   </article>
+
+          <div class="more_button">
+            <div class="m_button">
+            <h1>LOAD MORE</h1>
+           </div>
+          </div>
+        </div>
+        
+    <div class="content3">
+      <div class="c3_top">
+          <h1>VK MUSIC COLUMN</h1>
+      </div>
+          <div class="c3_bottom">
+        <div class="c3_l">
+           <div class="c3_l_t">
+            <img src="img/music/beatles_50.jpg" alt="">
+           </div>
+           <div class="c3_l_b">
+            <h1>The Beatles</h1>
+            <h2>Abbey Road 50th Anniversary</h2>
+            <p>55,000KRW</p>
+            <h3>[Universal Music]</h3>
+           </div>
+        </div>
+        <div class="c3_r">
+          <div class="c3_r_t">
+            <h1>The Beatles - Abbey Road 50th Anniversary</h1>
+          </div>
+          <div class="c3_r_b">
+            <p>Called the greatest band in pop history, The Beatles best album Abbey Road
+              will be released in various formats to mark the 50th anniversary of its 
+              release! The 50th anniversary edition of "Abbey Road," which will be released
+              two years ago following "The Sgt. Pepper's Lonely Hearts Club Band" and 
+              "The BEATLES (White Album) last year! The Beatles are the last The album,<br>
+              which contains many masterpieces such as Come Together, Something, and Here<br> 
+              Comes The Sun, is also the last album recorded together by Beatles members<br> 
+              such as John Lennon, Paul McCartney, George Harrison, and Ringo Star</p>
+              <span>· 180-gram 1xLP vinyl featuring the new stereo album mix</span><br>
+              <span>· remixed from the original multi-track tapes by Giles Martin</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="content4">
+      <div class="back_box1">
+        <h1>BACK IN STOCK</h1>
+      </div>
+      <article class="back_m">
+      <div class="back_info_box">
+        <div class="back_info">
+          <img src="img/music/back_1.jpg" alt="">
+          <h1>Rainych·evening cinema</h1>
+          <h2>Ride On Time</h2>
+          <p>28,000KRW</p>
+          <h3>[Sony Music]</h3>
+        </div>
+
+       <div class="back_info">
+        <img src="img/music/back_2.jpg" alt="">
+        <h1>Rainych</h1>
+        <h2>Plastic Love·Yume No Tsuzuki</h2>
+        <p>29,500KRW</p>
+        <h3>[Sony Music]</h3>
+       </div>
+
+       <div class="back_info">
+        <img src="img/music/back_3.jpg" alt="">
+        <h1>Forrest Gump</h1>
+        <h2>Original Motion Picture Soundtrack</h2>
+        <p>32,00KRW</p>
+        <h3>[Universal Music]</h3>
+      </div>
+     </div>
+     </article>
+    </div>
+    
+
+
+    <div class="content5">
+      <div class="pick_box1">
+        <h1>MONO PICK</h1>
+      </div>
+      <article class="pick_m">
+          <div class="pick_info_box">
+            <div class="pick_info">
+              <img src="img/music/pick_1.jpg" alt="">
+              <h1>Alessia Cara·Zedd</h1>
+              <h2>Stay</h2>
+              <p>37,000KRW</p>
+              <h3>[Universal Music]</h3>
+            </div>
+
+           <div class="pick_info">
+            <img src="img/music/pick_2.jpg" alt="">
+            <h1>Surf Mesa</h1>
+            <h2>ily (i love you baby)</h2>
+            <p>35,900KRW</p>
+            <h3>[Wanna Music Korea]</h3>
+           </div>
+
+           <div class="pick_info">
+            <img src="img/music/pick_3.jpg" alt="">
+            <h1>Jawsh 685·Jason Derulo</h1>
+            <h2>Savage Love (Laxed - Siren Beat)</h2>
+            <p>34,000KRW</p>
+            <h3>[Sony Music]</h3>
+          </div>
+
+          <div class="pick_info">
+            <img src="img/music/pick_4.jpg" alt="">
+            <h1>Doja Cat</h1>
+            <h2>Say So</h2>
+            <p>40,000KRW</p>
+            <h3>[Sony Music]</h3>
+          </div>
+        </div>
+       </article>
+      </div>
+
+      <div class="content6">
+        <div class="b3_top">
+            <h1>MONO POST</h1>
+        </div>
+            <div class="c3_bottom">
+          <div class="b3_l">
+             <div class="b3_l_t">
+              <img src="img/music/lalaland.jpg" alt="">
+             </div>
+             <div class="b3_l_b">
+              <h1>La La Land (Justin Hurwitz)</h1>
+              <!-- <h2>Justin Hurwitz</h2> -->
+              <p>48,000KRW</p>
+              <!-- <h3>[Universal Music]</h3> -->
+             </div>
+          </div>
+          <div class="b3_r">
+            <div class="b3_r_t">
+              <h1>"La La Land" OST That Sold The Most In Korea This Year</h1>
+            </div>
+            <div class="b3_r_b">
+              <p>According to the webzine Vinyl News, which delivers LP news based on<br>
+                Yes24 sales data, "La La Land" OST topped the overall LP sales volume<br>
+                "La La Land," which won major categories such as director and work awards<br>
+                at this year's Academy and Golden Globes Awards, also enjoyed Justin Wahitz's<br>
+                music, which won the theme award and music award, as popular as the movie<br>
+                In particular, the La La Land OST was released as a blue vinyl (LP), not black<br>
+                through a limited edition following the general class, drawing attention
+                such as John Lennon, Paul McCartney, George Harrison, and Ringo Star</p>
+                <span>· La La Land, a city of stars for those who dream</span><br>
+                <span>· It's the original soundtrack of La La Land, a musical movie with beautiful melodies</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- 슬라이드 이미지 -->
+      <div class="content7">
+      <div class="slideshow-container">
+
+        <div class="mySlides fade" style="display: block;">
+          <div class="numbertext"></div>
+          <img src="img/banner/banner1.jpg" alt="" style="width:100%">
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="img/banner/banner2.jpg" alt=""  style="width:100%">
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="img/banner/banner3.jpg" alt="" style="width:100%">
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        
+        </div>
+        <br>
+        
+        <div class="dot_box">
+          <div class="dot_s_box">
+            <span class="dot active" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span> 
+          </div>
+        </div>
+       </div>
+       
+      </div>  
+      <!-- 슬라이드 이미지 -->
+
+
+
+  <!-- TOP 버튼   -->
+  <button onclick="topFunction()" id="myBtn" title="Go to top">TOP</button>
+  <!-- TOP 버튼   -->
+
+  <script>
+
+  // TOP 버튼
+  var mybutton = document.getElementById("myBtn");
+
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+  // TOP 버튼
+
+  </script>
+
+
+   </div> <!-- 스몰박스 -->
+  </div> <!-- l_box -->
+
+   <div class="r_box">
+        <div id="logo">
+           <a href="index.html"><img src="img/logo.gif" alt=""></a>
+           <a href="index.html"><h1>stereo-mono</h1></a>
+        </div>
+        <div class="r_top">
+          <div class="btn_wrap">
+            <span id="b_span">FOLLOW ME</span>
+            <div class="container">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <a href="https://www.instagram.com/stereomono_shop/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <i class="fas fa-music"></i>
+            </div>
+           </div>
+           <ul class="info">
+            <li>LOGIN</li>
+            <li>WISHLIST</li>
+            <li>CART</li>
+           </ul>
+        </div>
+        <div class="r_bottom">
+          <h1>stereo-mono</h1>
+          <p>Terms And Conditions · Personal Information Handling Policy</p>
+          <h2>COPYRIGHT (C) 2020 Stereo-Mono. ALL RIGHTS RESERVED</h2>
+        </div>
+    </div> 
+
+
+</div> <!-- 전체 wrap -->
+  
+
+</body>
+
+</html>
